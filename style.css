@@ -93,6 +93,32 @@ img {
 }
 
 /* --------------------------------------------------------------------------
+   2b. Accessibility helpers
+   -------------------------------------------------------------------------- */
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  padding: 0.6rem 1rem;
+  background-color: var(--paper);
+  color: var(--deep);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  left: 0;
+  z-index: 10;
+}
+
+a:focus-visible,
+.skip-link:focus-visible {
+  outline: 3px solid var(--surf);
+  outline-offset: 2px;
+}
+
+/* --------------------------------------------------------------------------
    3. Header
    -------------------------------------------------------------------------- */
 
