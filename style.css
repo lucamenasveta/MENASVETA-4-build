@@ -343,16 +343,23 @@ a:focus-visible,
     font-size: 2.9rem;
   }
 
+  /* The three full-bleed bars keep their content on the same left edge
+     as the centred main column. */
   .site-header,
-  .site-nav > .nav-list,
+  .site-nav,
   .site-footer {
-    max-width: 68rem;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
+    padding-left: max(var(--space), calc((100% - 68rem) / 2));
+    padding-right: max(var(--space), calc((100% - 68rem) / 2));
+  }
+
+  .nav-list {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .site-main {
+    padding-left: 0;
+    padding-right: 0;
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
   }
